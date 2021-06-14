@@ -21,4 +21,21 @@ function addCol() {
     boardCols(colNo)
 }
 
+function removeCol() {
+    if (colNo <= 1) {
+        return;
+    }
+
+    let index = itemNo;
+    for (let i = 1; i <= rowNo; i++) {
+        board.children[index - 1].remove();
+        --itemNo;
+        index -= colNo
+    }
+    colNo--;
+    boardCols(colNo);
+}
+
 document.getElementById("addCBtn").onclick = addCol;
+
+document.getElementById("removeCBtn").onclick = removeCol;
