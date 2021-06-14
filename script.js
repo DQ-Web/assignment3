@@ -36,6 +36,18 @@ function removeCol() {
     boardCols(colNo);
 }
 
+function addRow() {
+    for (let i = 0; i < colNo; i++) {
+        let div = document.createElement("div");
+        div.className = 'grid-item';
+        div.innerText = ++itemNo;
+        board.append(div);
+    }
+    rowNo++;
+}
+
 document.getElementById("addCBtn").onclick = addCol;
 
 document.getElementById("removeCBtn").onclick = removeCol;
+
+document.getElementById("addRBtn").onclick = addRow;
