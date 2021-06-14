@@ -1,0 +1,13 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(auto, 70px));
+    grid-auto-rows: minmax(70px, auto);
+    grid-gap: 16px;
+  }
+  
+  .grid-item {
+    border: 1px solid black;
+  }
+  .grid-item:hover {
+    background-color: rgba(191, 191, 191, .5);
+  }
